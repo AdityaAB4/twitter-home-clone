@@ -123,9 +123,10 @@ export default function Home() {
               Show 411 Tweets
             </div>
             <hr />
-            <div className="ml-16 mt-4 mb-4">
+            <div className="mt-4 mb-4">
               <div className="flex flex-row ">
-                <span className="font-medium">Moneycontrol</span>
+                <CgProfile className="w-10 h-10 ml-2 " />
+                <span className="font-medium ml-2">Moneycontrol</span>
                 <span className="mt-1.5 ml-1">
                   <MdVerified className="text-blue-500" />
                 </span>
@@ -134,8 +135,7 @@ export default function Home() {
                 </span>
                 <span className="ml-1 text-slate-500 text-sm mt-0.5">.44m</span>
               </div>
-
-              <p className="mt-2 mr-2">
+              <p className=" ml-14 mr-2">
                 In #MCRecommends this weekend: Paul John Christmas Edition 2022,
                 HOSA Goa, Hamilton Khakhi Field Murph 38mm.
                 <br />
