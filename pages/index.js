@@ -19,6 +19,7 @@ import { ImEarth } from "react-icons/im";
 import { MdVerified } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { MdScheduleSend } from "react-icons/md";
+import { BsStars } from "react-icons/bs";
 
 import styles from "../styles/Home.module.css";
 
@@ -40,40 +41,48 @@ export default function Home() {
         <div className="flex  ">
           {/* First Div */}
           <div className=" flex flex-col w-44">
-            <div className="flex justify-end mr-6 mt-4  ">
-              <BsTwitter className="text-slate-300  w-7 h-7  " />
+            <div className="flex justify-end mr-6 mt-4 ">
+              <BsTwitter className="text-slate-300  w-7 h-7 cursor-pointer hover:text-white" />
+            </div>
+            <div className="flex justify-end mr-6 mt-6">
+              <BiHomeCircle className="text-slate-300    w-7 h-7 cursor-pointer hover:text-white  " />
             </div>
             <div className="flex justify-end mr-6 mt-6 ">
-              <BiHomeCircle className="text-slate-300  w-6 h-6  " />
+              <HiOutlineHashtag className="text-slate-300   w-7 h-7 cursor-pointer hover:text-white  " />
             </div>
             <div className="flex justify-end mr-6 mt-6 ">
-              <HiOutlineHashtag className="text-slate-300  w-6 h-6  " />
+              <RiNotification2Line className="text-slate-300   w-7 h-7 cursor-pointer hover:text-white  " />
             </div>
             <div className="flex justify-end mr-6 mt-6 ">
-              <RiNotification2Line className="text-slate-300  w-6 h-6  " />
+              <HiOutlineMail className="text-slate-300 w-7 h-7 cursor-pointer hover:text-white  " />
             </div>
             <div className="flex justify-end mr-6 mt-6 ">
-              <HiOutlineMail className="text-slate-300  w-6 h-6  " />
-            </div>
-            <div className="flex justify-end mr-6 mt-6 ">
-              <FaRegBookmark className="text-slate-300  w-6 h-6  " />
-            </div>
-
-            <div className="flex justify-end mr-6 mt-6 ">
-              <RiFileListLine className="text-slate-300  w-6 h-6  " />
-            </div>
-            <div className="flex justify-end mr-6 mt-6 ">
-              <BsPerson className="text-slate-300  w-6 h-6  " />
+              <FaRegBookmark className="text-slate-300   w-7 h-6 cursor-pointer hover:text-white  " />
             </div>
 
             <div className="flex justify-end mr-6 mt-6 ">
-              <CgMoreO className="text-slate-300  w-6 h-6  " />
+              <RiFileListLine className="text-slate-300   w-7 h-7 cursor-pointer hover:text-white  " />
+            </div>
+            <div className="flex justify-end mr-6 mt-6 ">
+              <BsPerson className="text-slate-300  hover:font-bold  w-7 h-7 cursor-pointer hover:text-white  " />
+            </div>
+
+            <div className="flex justify-end mr-6 mt-6 ">
+              <CgMoreO className="text-slate-300   w-7 h-7 cursor-pointer hover:text-white  " />
+            </div>
+            <div className="flex justify-end mr-6 mt-6 ">
+              <CgProfile className="text-slate-300  w-8 h-8  cursor-pointer hover:text-white" />
             </div>
           </div>
           {/* Second Div */}
           <div className="bg-black text-slate-200 w-2/4 border-x border-slate-500  max-h-screen overflow-y-scroll scrollbar-hide">
-            <h1 className="m-2 font-bold text-lg">Home</h1>
-            <div className="flex">
+            <div className="bg-dark fixed bg-opacity-50 backdrop-filter backdrop-blur-lg w-2/4">
+              <div className="flex flex-row justify-between border-slate-500">
+                <h1 className="m-2 font-bold text-lg  ">Home</h1>
+                <BsStars className="mr-2 mt-2" />
+              </div>
+            </div>
+            <div className="flex mt-10">
               <div className="m-3 ">
                 <CgProfile className="mt-2 h-10 w-10" />
               </div>
@@ -112,7 +121,7 @@ export default function Home() {
                       <SlLocationPin className="w-5 h-5 text-blue-500" />
                     </div>
                   </div>
-                  <div className="mt-2 mr-2 bg-blue-500 px-4 py-1 font-medium rounded-full ">
+                  <div className="mt-2 mr-2 bg-blue-500 px-4 py-1 font-medium rounded-full cursor-pointer">
                     Tweet
                   </div>
                 </div>
@@ -124,82 +133,102 @@ export default function Home() {
             </div>
             <hr className="h-px bg-gray-700 border-0 dark:bg-gray-700" />
             <div className="mt-4 mb-4">
-              <div className="flex flex-row ">
-                <CgProfile className="w-10 h-10 ml-2 " />
-                <span className="font-medium ml-2">Moneycontrol</span>
-                <span className="mt-1.5 ml-1">
-                  <MdVerified className="text-blue-500" />
-                </span>
-                <span className="ml-0.5 text-slate-500 text-sm mt-0.5 ">
-                  @moneycontrolcom
-                </span>
-                <span className="ml-1 text-slate-500 text-sm mt-0.5">.44m</span>
+              <div className="mt-4 mb-4">
+                <div className="flex flex-row">
+                  <CgProfile className="w-14 h-14 ml-2" />
+                  <div className="flex flex-col">
+                    <div className="flex flex-row ">
+                      <span className="font-medium ml-2">Moneycontrol</span>
+                      <span className="mt-1.5 ml-1">
+                        <MdVerified className="text-blue-500" />
+                      </span>
+                      <span className="ml-0.5 text-slate-500 text-sm mt-0.5 ">
+                        @moneycontrolcom
+                      </span>
+                      <span className="ml-1 text-slate-500 text-sm mt-0.5">
+                        .44m
+                      </span>
+                    </div>
+                    <p className="mt-2 ml-2 mr-2">
+                      In #MCRecommends this weekend: Paul John Christmas Edition
+                      2022, HOSA Goa, Hamilton Khakhi Field Murph 38mm.
+                      <br />
+                      Full list out in #MCWeekendReads⚡️tomorrow.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <p className=" ml-14 mr-2">
-                In #MCRecommends this weekend: Paul John Christmas Edition 2022,
-                HOSA Goa, Hamilton Khakhi Field Murph 38mm.
-                <br />
-                Full list out in #MCWeekendReads⚡️tomorrow.
-              </p>
             </div>
-            <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700" />
-
-            <div className="ml-16 mt-4 mb-4">
-              <div className="flex flex-row"></div>
-              <div className="flex flex-row ">
-                <span className="font-medium">Moneycontrol</span>
-                <span className="mt-1.5 ml-1">
-                  <MdVerified className="text-blue-500" />
-                </span>
-                <span className="ml-0.5 text-slate-500 text-sm mt-0.5 ">
-                  @moneycontrolcom
-                </span>
-                <span className="ml-1 text-slate-500 text-sm mt-0.5">.44m</span>
+            <hr className="h-px bg-gray-700 border-0 " />
+            <div className="mt-4 mb-4">
+              <div className="flex flex-row">
+                <CgProfile className="w-14 h-14 ml-2" />
+                <div className="flex flex-col">
+                  <div className="flex flex-row ">
+                    <span className="font-medium ml-2">Moneycontrol</span>
+                    <span className="mt-1.5 ml-1">
+                      <MdVerified className="text-blue-500" />
+                    </span>
+                    <span className="ml-0.5 text-slate-500 text-sm mt-0.5 ">
+                      @moneycontrolcom
+                    </span>
+                    <span className="ml-1 text-slate-500 text-sm mt-0.5">
+                      .54m
+                    </span>
+                  </div>
+                  <p className="mt-2 ml-2 mr-2">
+                    In #MCRecommends this weekend: Paul John Christmas Edition
+                    2022, HOSA Goa, Hamilton Khakhi Field Murph 38mm.
+                    <br />
+                    Full list out in #MCWeekendReads⚡️tomorrow.
+                  </p>
+                </div>
               </div>
-
-              <p className="mt-2 mr-2">
-                In #MCRecommends this weekend: Paul John Christmas Edition 2022,
-                HOSA Goa, Hamilton Khakhi Field Murph 38mm.
-                <br />
-                Full list out in #MCWeekendReads⚡️tomorrow.
-              </p>
             </div>
-            <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700" />
-            <div className="ml-16 mt-4 mb-4">
-              <div className="flex flex-row ">
-                <span className="">Moneycontrol</span>
-                <span className="mt-1.5 ml-1">
-                  <MdVerified className="text-blue-500" />
-                </span>
-                <span className="ml-0.5 text-slate-500 text-sm mt-0.5">
-                  @moneycontrolcom
-                </span>
-                <span className="ml-1 text-slate-500 text-sm mt-0.5">.44m</span>
+            <hr />
+            <div className="mt-4 mb-4">
+              <div className="flex flex-row">
+                <CgProfile className="w-12 h-12 ml-2" />
+                <div className="flex flex-col">
+                  <div className="flex flex-row ">
+                    <span className="font-medium ml-2">Nextjs</span>
+                    <span className="mt-1.5 ml-1">
+                      <MdVerified className="text-blue-500" />
+                    </span>
+                    <span className="ml-0.5 text-slate-500 text-sm mt-0.5 ">
+                      @Nextjsdev
+                    </span>
+                    <span className="ml-1 text-slate-500 text-sm mt-0.5">
+                      .48m
+                    </span>
+                  </div>
+                  <p className="mt-2 ml-2 mr-2">
+                    Nextjs makes it easy to create server-rendered React apps,
+                    which helps with SEO and performance.
+                    <br />
+                    #Nextjs #React #Webdevelopment
+                  </p>
+                </div>
               </div>
-
-              <p className="mt-2 mr-2">
-                In #MCRecommends this weekend: Paul John Christmas Edition 2022,
-                HOSA Goa, Hamilton Khakhi Field Murph 38mm.
-                <br />
-                Full list out in #MCWeekendReads⚡️tomorrow.
-              </p>
             </div>
             <hr />
           </div>
           {/* Third Div */}
-          <div className="w-96 -mt-2 max-h-screen overflow-y-auto scrollbar-hide">
-            <div className="text-white">
-              <input
-                type="search"
-                name="search"
-                placeholder={`🔍 Search Twitter`}
-                className="h-10 px-5 pr-32 m-5 bg-gray-800 rounded-full text-sm focus:outline-none"
-              />
+          <div className="w-96 -mt-3 max-h-screen overflow-y-auto scrollbar-hide">
+            <div className="fixed  bg-black w-2/4 pb-2 ">
+              <div className="text-white ">
+                <input
+                  type="search"
+                  name="search"
+                  placeholder={`🔍 Search Twitter`}
+                  className="h-10 px-5 pr-32 ml-5 mr-5 mt-5  bg-gray-800 rounded-full text-sm focus:outline-none"
+                />
+              </div>
             </div>
-            <div className="px-5 py-5 mr-4 ml-4  w-10/12 bg-gray-800 text-slate-200 shadow-lg rounded-lg ">
+            <div className="px-5 py-5 mr-4 ml-4 mt-20 w-10/12 bg-gray-800 text-slate-200 shadow-lg rounded-lg ">
               <span className="text-xl font-bold ">What&apos;s Happening </span>
               <div className="mr-2 mt-2 text-sm "> sports LIVE</div>
-              <div className="mb-4 text-sm font-bold "> COVID-19 in India</div>
+              <div className="mb-4 text-sm font-bold ">2022 FIFA World Cup</div>
 
               <span className="text-sm ">Trending in India</span>
               <div className=" text-md font-bold"> Reactjs</div>
@@ -214,7 +243,7 @@ export default function Home() {
               <span className="text-xl font-bold">Who to follow</span>
               <div className="flex flex-row justify-between items-center">
                 <div className="mr-2 mt-2 flex flex-row">
-                  <CgProfile className="mt-3  h-10 w-10" />
+                  <CgProfile className="mt-3 h-10 w-10" />
                   <p className="m-2">
                     <span className="font-bold"> Don Quixote</span> <br />{" "}
                     <span className="text-sm">@donquixo</span>
